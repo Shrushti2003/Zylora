@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc><priority>1.0</priority></url>
+  <url><loc>/marketplace</loc><priority>0.9</priority></url>
+  <url><loc>/dashboard/buy</loc><priority>0.8</priority></url>
+  <url><loc>/dashboard/sell</loc><priority>0.8</priority></url>
+  <url><loc>/donate</loc><priority>0.8</priority></url>
+  <url><loc>/resource-map</loc><priority>0.8</priority></url>
+  <url><loc>/stories</loc><priority>0.7</priority></url>
+  <url><loc>/impact</loc><priority>0.7</priority></url>
+  <url><loc>/about</loc><priority>0.7</priority></url>
+  <url><loc>/contact</loc><priority>0.7</priority></url>
+  <url><loc>/help</loc><priority>0.8</priority></url>
+  <url><loc>/help/faqs</loc><priority>0.7</priority></url>
+  <url><loc>/trust-safety</loc><priority>0.7</priority></url>
+  <url><loc>/legal/privacy-policy</loc><priority>0.7</priority></url>
+  <url><loc>/legal/terms-of-use</loc><priority>0.7</priority></url>
+  <url><loc>/legal/cookie-policy</loc><priority>0.6</priority></url>
+  <url><loc>/legal/copyright-policy</loc><priority>0.6</priority></url>
+  <url><loc>/legal/data-and-privacy</loc><priority>0.6</priority></url>
+  <url><loc>/legal/account-deletion</loc><priority>0.6</priority></url>
+  <url><loc>/report/user</loc><priority>0.6</priority></url>
+  <url><loc>/report/listing</loc><priority>0.6</priority></url>
+  <url><loc>/report/scam</loc><priority>0.6</priority></url>
+  <url><loc>/report/copyright</loc><priority>0.6</priority></url>
+  <url><loc>/report/technical-issue</loc><priority>0.6</priority></url>
+  <url><loc>/support/accessibility</loc><priority>0.5</priority></url>
+  <url><loc>/support/security</loc><priority>0.5</priority></url>
+  <url><loc>/support/responsible-disclosure</loc><priority>0.5</priority></url>
+  <url><loc>/support/status</loc><priority>0.5</priority></url>
+  <url><loc>/support/changelog</loc><priority>0.5</priority></url>
+  <url><loc>/support/sitemap</loc><priority>0.5</priority></url>
+</urlset>

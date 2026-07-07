@@ -1,0 +1,56 @@
+services:
+  mongodb:
+    image: mongo:7.0.12
+    container_name: zylora-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: zylora
+    volumes:
+      - zylora_mongo_data:/data/db
+
+  redis:
+    image: redis:7.2.5-alpine
+    container_name: zylora-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ../backend
+    container_name: zylora-backend
+    restart: unless-stopped
+    depends_on:
+      - mongodb
+      - redis
+    ports:
+      - "4000:4000"
+    env_file:
+      - ../backend/.env
+
+  ai-service:
+    build:
+      context: ../backend/ai-service
+    container_name: zylora-ai-service
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - ../backend/ai-service/.env
+
+  frontend:
+    build:
+      context: ../frontend
+    container_name: zylora-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    env_file:
+      - ../frontend/.env
+
+volumes:
+  zylora_mongo_data:

@@ -1,0 +1,23 @@
+{
+  "name": "zylora",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack circular economy marketplace with React, Express, MongoDB, Firebase Authentication, maps, messaging, and AI-assisted listing intelligence.",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "frontend:dev": "npm --prefix frontend run dev",
+    "frontend:build": "npm --prefix frontend run build",
+    "frontend:lint": "npm --prefix frontend run lint",
+    "backend:dev": "npm --prefix backend run dev",
+    "backend:build": "npm --prefix backend run build",
+    "backend:lint": "npm --prefix backend run lint",
+    "build": "npm run backend:build && npm run frontend:build",
+    "lint": "npm run frontend:lint && npm run backend:lint"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
