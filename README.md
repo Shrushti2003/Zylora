@@ -57,26 +57,21 @@ health endpoint on their documented development ports.
 
 ## Vercel deployment
 
-The root `vercel.json` deploys the Vite frontend from `frontend/dist` and
-routes `/api/*` requests to the Express app through `api/index.js`.
+The root `vercel.json` deploys only the Vite frontend from `frontend/dist`.
+Deploy the Express API separately on Render using `render.yaml`.
 
 Set these in Vercel before building:
 
-- `VITE_API_BASE_URL=/api`
+- `VITE_API_BASE_URL=https://<render-backend-host>/api`
 - `VITE_FIREBASE_API_KEY`
 - `VITE_FIREBASE_AUTH_DOMAIN`
 - `VITE_FIREBASE_PROJECT_ID`
 - `VITE_FIREBASE_STORAGE_BUCKET`
 - `VITE_FIREBASE_MESSAGING_SENDER_ID`
 - `VITE_FIREBASE_APP_ID`
-- `MONGODB_URI`
-- `CLIENT_URL`
-- `CORS_ORIGIN`
-- `FIREBASE_SERVICE_ACCOUNT_KEY` or `FIREBASE_CLIENT_EMAIL` plus `FIREBASE_PRIVATE_KEY`
-- Optional: `GOOGLE_GEMINI_API_KEY`
 
-For separate frontend/backend hosting, keep using the standalone frontend and
-backend commands documented in `docs/DEPLOYMENT.md`.
+Set backend-only values such as `MONGODB_URI`, `CLIENT_URL`, `CORS_ORIGIN`, and
+Firebase Admin credentials on Render.
 
 ## Firebase authentication deployment checklist
 
